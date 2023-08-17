@@ -18,7 +18,7 @@ export class AuthServiceService {
   }
 
   logInUser(data:any) {
-    localStorage.setItem('usersData',data);
+   return localStorage.setItem('usersData',data);
   }
 
   logOutUser(data:any) {

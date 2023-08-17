@@ -3,19 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DashboadComponent } from './dashboad/dashboad.component';
 import { LoginGuardGuard } from './guards/login-guard.guard';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [
-] = [
- { path: 'login',
-  component: AppComponent
- },
- { path: 'dashboard',
+const routes: Routes = [{
+  path: 'login',
+  component: LoginComponent
+},
+{
+  path: 'dashboard',
   component: DashboadComponent,
   canActivate: [LoginGuardGuard]
- },
- {
+},
+{
   path: '',
-  redirectTo: 'login',
+  redirectTo: 'dashboard',
   pathMatch: 'full'
 },
 ]

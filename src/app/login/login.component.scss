@@ -1,0 +1,72 @@
+.itemCenter {
+    margin-top: 259px !important;
+}
+
+.leftpanelClr {
+    background: #eae9e9;
+    height: 700px !important;
+}
+
+.rightpanelClr {
+    background: white;
+}
+
+.centerMapped {
+    width: 350px;
+    position: relative;
+    left: 170px !important;
+}
+.forgotSection{
+    color: blue;
+    padding-left: 222px !important;
+}
+
+.submitBtnWidth{
+    width: 348px !important;
+}
+
+
+.btn-google {
+    color: black;
+    background-color: white;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.btn-social :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    padding: 7px;
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+ }
