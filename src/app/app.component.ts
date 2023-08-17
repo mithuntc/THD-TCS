@@ -10,5 +10,6 @@ export class AppComponent {
 
 
   loginClick(){
+    alert(1)
     }
 }

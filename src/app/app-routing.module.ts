@@ -12,7 +12,12 @@ const routes: Routes = [
  { path: 'dashboard',
   component: DashboadComponent,
   canActivate: [LoginGuardGuard]
- }
+ },
+ {
+  path: '',
+  redirectTo: 'login',
+  pathMatch: 'full'
+},
 ]
 
 @NgModule({
