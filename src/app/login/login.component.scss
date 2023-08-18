@@ -1,14 +1,19 @@
+@mixin colors($theme: #eae9e9) {
+    background: $theme;
+}
+
+
 .itemCenter {
     margin-top: 259px !important;
 }
 
 .leftpanelClr {
-    background: #eae9e9;
+    @include colors;
     height: 700px !important;
 }
 
 .rightpanelClr {
-    background: white;
+    @include colors($theme: white);
 }
 
 .centerMapped {
