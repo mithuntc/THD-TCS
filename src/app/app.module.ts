@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DashboadComponent } from './dashboad/dashboad.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { LoginGuardGuard } from './guards/login-guard.guard';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
