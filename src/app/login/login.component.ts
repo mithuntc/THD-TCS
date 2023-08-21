@@ -10,7 +10,10 @@ import { AuthServiceService } from '../services/auth-service.service';
 })
 export class LoginComponent implements OnInit {
 
-
+  username:any;
+  password:any;
+  message="Login Failed!!!!!";
+  loginCliked = 0;
   constructor(private fb: FormBuilder, private authService: AuthServiceService, private router: Router) { }
 
   ngOnInit(): void {
@@ -18,9 +21,14 @@ export class LoginComponent implements OnInit {
   }
 
   loginClick() {
-    this.authService.logInUser(true)
-        this.authService.setLoginStatus(true);
-        this.router.navigateByUrl('/dashboard')
+    if(this.username=='abc@abc.com' && this.password=='1234'){
+      this.authService.logInUser(true)
+      this.authService.setLoginStatus(true);
+      this.router.navigateByUrl('/dashboard');
+      this.loginCliked = 0;
+    } else {
+      this.loginCliked = 1;
+    }
   }
 
 }
