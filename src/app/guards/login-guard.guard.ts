@@ -9,16 +9,15 @@ import { AuthServiceService } from '../services/auth-service.service';
 export class LoginGuardGuard implements CanActivate {
 
   constructor(private authService: AuthServiceService, private router: Router) {}
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-  boolean | Observable<boolean> | Promise<boolean> {
-    if (!this.authService.LoginStatus) {
-      this.router.navigate(['login']);
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    const user = this.authService.LoginStatus;
+    if (user) {
+        // authorised so return true
+        return true;
     }
-    return this.authService.LoginStatus;
-  }
-  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-  boolean | Observable<boolean> | Promise<boolean> {
-    return this.canActivate(route, state);
-  }
+    // not logged in so redirect to login page with the return url
+    this.router.navigate(['/login']);
+    return false;
+}
   
 }
