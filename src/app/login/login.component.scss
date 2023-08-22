@@ -2,14 +2,36 @@
     background: $theme;
 }
 
+.mainDIv{
+    overflow-x: hidden;
+}
+
+.leftDiv{
+    height: 721px;
+}
 
 .itemCenter {
-    margin-top: 259px !important;
+    position: relative;
+}
+
+.dataDivLeft {
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 163px;
+    left: 320px;
+    transform: translate(-31%, 100%);
+  }
+
+.dataDivRight {
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, 50%);
 }
 
 .leftpanelClr {
     @include colors;
-    height: 700px !important;
 }
 
 .rightpanelClr {
@@ -19,15 +41,15 @@
 .centerMapped {
     width: 350px;
     position: relative;
-    left: 170px !important;
+    left: 170px;
 }
 .forgotSection{
     color: blue;
-    padding-left: 222px !important;
+    padding-left: 222px;
 }
 
 .submitBtnWidth{
-    width: 348px !important;
+    width: 348px;
 }
 
 
